@@ -1,14 +1,55 @@
 {
     "private": true,
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+    "name": "laravel-inertiajs-vue3-adminlte3",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ferdousanam/laravel-inertiajs-vue3-adminlte3.git"
     },
-    "devDependencies": {
-        "axios": "^0.27",
-        "laravel-vite-plugin": "^0.6.0",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "vite": "^3.0.0"
+    "bugs": {
+        "url": "https://github.com/ferdousanam/laravel-inertiajs-vue3-adminlte3/issues"
+    },
+    "homepage": "https://github.com/ferdousanam/laravel-inertiajs-vue3-adminlte3#readme",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix && npm run ssr:build",
+        "fix:eslint": "eslint --ext .js,.vue resources/js/ --fix",
+        "fix:prettier": "prettier --write --loglevel warn 'resources/js/**/*.vue'",
+        "fix-code-style": "npm run fix:prettier && npm run fix:eslint",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production && npm run ssr:build",
+        "heroku-postbuild": "npm run prod",
+        "ssr:build": "mix --production --mix-config=webpack.ssr.mix.js",
+        "ssr:serve": "node public/js/ssr.js"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.0",
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-vue3": "^0.6.0",
+        "@inertiajs/progress": "^0.2.7",
+        "@inertiajs/server": "^0.1.0",
+        "@popperjs/core": "^2.11.0",
+        "@vue/server-renderer": "^3.2.27",
+        "admin-lte": "^3.2.0",
+        "autoprefixer": "10.4.5",
+        "bootstrap": "^4.6.2",
+        "eslint": "^8.4.1",
+        "eslint-plugin-vue": "^8.2.0",
+        "jquery": "^3.6.1",
+        "laravel-mix": "^6.0.41",
+        "lodash": "^4.17.21",
+        "postcss": "^8.4.17",
+        "postcss-import": "^12.0.1",
+        "postcss-nesting": "^7.0.1",
+        "prettier": "^2.5.1",
+        "sass": "^1.55.0",
+        "sass-loader": "^13.1.0",
+        "uuid": "^8.3.2",
+        "vue": "^3.2.27",
+        "vue-loader": "^16.2.0",
+        "webpack-node-externals": "^3.0.0"
     }
 }
